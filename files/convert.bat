@@ -1,4 +1,4 @@
-cls
+ls
 set line=%*
 
 :set text to lowercase
@@ -66,7 +66,7 @@ set line=%line:createdir =mkdir %
 
 cls
 
-REM strings
+REM vars
 :##ipv4 = %ipv4%
 set line=%line:##ipv4=!ipv4!%
 
@@ -75,6 +75,16 @@ set line=%line:##ipv4=!ipv4!%
 
 :##netip = %netip%
 set line=%line:##netip=!netip!%
+
+:##cd = %cd%
+set line=%line:##cd=!cd!%
+
+
+:global vars
+set "result=%line:##=" & set "result=%"
+echo %result%
+
+
 
 
 
